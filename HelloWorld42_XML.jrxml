@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa652548-4956-46f3-839a-eeead718b28a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NO_DATA_ADAPTER"/>
+	<property name="ireport.jasperserver.url" value="http://45.83.230.94:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Agrica/MAGI/Reports/HelloWorld42_XML_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Agrica/MAGI/Reports/HelloWorld42_XML"/>
+	<parameter name="xmlString" class="java.lang.String"/>
+	<parameter name="XML_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.io.ByteArrayInputStream($P{xmlString}.getBytes("UTF-8"))]]></defaultValueExpression>
+	</parameter>
+	<queryString language="XPath">
+		<![CDATA[/data/title]]>
+	</queryString>
+	<field name="val" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="val"/>
+		<fieldDescription><![CDATA[val]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="8279c1fd-f689-4cdd-b04f-7f43e23ae4ed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84244fd2-26cb-481e-b846-a46f5024a25b"/>
+				</reportElement>
+				<text><![CDATA[Titles]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="550" height="30" uuid="a9d78dc6-d6f5-4ffd-9570-9e991e0efd76">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84244fd2-26cb-481e-b846-a46f5024a25b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{val}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
